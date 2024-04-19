@@ -13,9 +13,9 @@ This project aims to provide an easier boilerplate to start an simple Rest API o
 
 ## Features
 - Provide TS configuration
-- Provide exemple Rest GET api
-- Provide Swagger documentation for GET api
-- Split routers, controllers and interfaces on diffents folter
+- Provide examples for Rest GET Api
+- Provide Swagger documentation for GET routers
+- Split routers, controllers and interfaces on different folders
 - And also you can run project as Docker container
 
 ## Installation
@@ -23,6 +23,7 @@ This project aims to provide an easier boilerplate to start an simple Rest API o
 This boilerplate requires [Node.js](https://nodejs.org/) v10+ to run.
 
 ## Create project 
+
 You can just clone this repo by:
 ```sh
 git clone https://github.com/renatosantosti/node-ts-swagger-api-boilerplate
@@ -30,7 +31,6 @@ git clone https://github.com/renatosantosti/node-ts-swagger-api-boilerplate
 or try by youself from scrach:
 
 #### Creating project 
-Install the dependencies and devDependencies and start the server.
 
 ```sh
 mkdir node-ts-swagger-api-boilerplate
