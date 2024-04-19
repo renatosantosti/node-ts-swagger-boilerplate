@@ -8,6 +8,8 @@ This project aims to provide an easier boilerplate to start an simple Rest API o
 - Swagger
 - Morgan
 - Docker
+  
+![image](https://github.com/renatosantosti/node-ts-swagger-boilerplate/assets/16526537/79abe714-7d93-4211-864f-ca04e7e0cb95)
 
 ## Features
 - Provide TS configuration
