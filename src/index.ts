@@ -4,6 +4,7 @@ import swaggerUi from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import liveRouters from "./routes/live/router";
 import statusRouters from "./routes/status/router";
+import defaultRouter from "./routes/default/router";
 
 const PORT = process.env.PORT || 8000;
 
@@ -33,8 +34,8 @@ const swaggerDefinition = {
 
 const swaggerOptions = {
   swaggerDefinition,
-  // Paths to files containing OpenAPI definitions
-  apis: [`${__dirname}/routes/live/router.js`, `${__dirname}/routes/status/router.js`],
+  // Paths to files containing OpenAPI definitions. It applied *.* to accept both .js and .ts extension for dev and after built the project.
+  apis: [`${__dirname}/routes/live/*.*`, `${__dirname}/routes/status/*.*`],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
@@ -43,6 +44,7 @@ const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Apply all other routers
+app.use(defaultRouter);
 app.use(liveRouters);
 app.use(statusRouters);
 

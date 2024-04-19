@@ -88,27 +88,13 @@ to that last dependencies just add following settings on tsconfig.json
   }
 }
 ```
-and also, add tso.json file with this content below:
-```sh
-{
-  "entryFile": "src/index.ts",
-  "noImplicitAdditionalProperties": "throw-on-extras",
-  "spec": {
-    "outputDirectory": "public",
-    "specVersion": 3
-  }
-}
-```
 
 Finally change package.json to this:
 ```sh
 "scripts": {
-    "start": "node build/index.js",
-    "predev": "npm run swagger",
-    "prebuild": "npm run swagger",
+    "start": "node dist/index.js",
     "build": "tsc",
-    "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
-    "swagger": "tsoa spec",
+    "dev": "nodemon"
   },
 ```
 ## Docker
